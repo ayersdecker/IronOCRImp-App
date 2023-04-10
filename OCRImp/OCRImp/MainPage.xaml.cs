@@ -27,7 +27,7 @@ public partial class MainPage : ContentPage
             // Input.Deskew();  // use if image not straight
             // Input.DeNoise(); // use if image contains digital noise
             var Result = Ocr.Read(Input);
-            imageReturn.Text = Result.Text;
+            imageReturn.Text = Result.Text.Replace("\r", "").Replace("\n", " ");
         }
     }
 
